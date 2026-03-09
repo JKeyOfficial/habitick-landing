@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HabiTick — Build habits that stick</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="habitick-blue-logo.svg" />
   <style>
     :root {
       --bg: #ffffff;
@@ -59,7 +60,8 @@
       transition: background 0.3s, border-color 0.3s;
     }
     .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
-    .nav-logo-icon { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .nav-logo-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .nav-logo-icon img { width: 32px; height: 32px; object-fit: contain; border-radius: 8px; }
     .nav-logo-text { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; color: var(--text); }
     .nav-links { display: flex; align-items: center; gap: 32px; position: absolute; left: 50%; transform: translateX(-50%); }
     .nav-links a { text-decoration: none; color: var(--text-2); font-size: 14px; font-weight: 500; transition: color 0.2s; }
@@ -157,6 +159,7 @@
     .preview-inner { padding: 28px; }
     .preview-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
     .preview-logo { display: flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; color: var(--text); }
+    .preview-logo img { width: 32px; height: 32px; object-fit: contain; border-radius: 8px; }
     .preview-pills { display: flex; gap: 8px; }
     .preview-pill { padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 600; border: 1px solid var(--border); background: var(--bg); color: var(--text-2); }
     .preview-pill.green { background: #10b98115; border-color: #10b98130; color: #10b981; }
@@ -248,6 +251,7 @@
       flex-wrap: wrap; gap: 16px;
     }
     .footer-logo { display: flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-weight: 800; color: var(--text); font-size: 16px; text-decoration: none; }
+    .footer-logo img { width: 32px; height: 32px; object-fit: contain; border-radius: 8px; }
     .footer-links { display: flex; gap: 24px; }
     .footer-links a { font-size: 13px; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--text); }
@@ -283,7 +287,7 @@
   <!-- Nav -->
   <nav>
     <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">⚡</div>
+      <div class="nav-logo-icon"><img src="habitick-blue-logo.png" alt="HabiTick" /></div>
       <span class="nav-logo-text">HabiTick</span>
     </a>
     <div class="nav-links">
@@ -324,7 +328,7 @@
       </div>
       <div class="preview-inner">
         <div class="preview-header">
-          <div class="preview-logo">⚡ HabiTick</div>
+          <div class="preview-logo"><img src="habitick-blue-logo.png" alt="HabiTick" /> HabiTick</div>
           <div class="preview-pills">
             <div class="preview-pill green">✓ 3/3 habits today</div>
             <div class="preview-pill blue">🔥 Streak: 14 days</div>
@@ -517,7 +521,10 @@
 
   <!-- Footer -->
   <footer>
-    <a href="#" class="footer-logo">⚡ HabiTick</a>
+    <a href="#" class="footer-logo">
+      <img src="habitick-blue-logo.png" alt="HabiTick" />
+      HabiTick
+    </a>
     <div class="footer-links">
       <a href="https://app.habitick.pro">App</a>
       <a href="/privacy">Privacy Policy</a>
