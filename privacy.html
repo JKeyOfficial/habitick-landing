@@ -8,7 +8,11 @@
   <meta name="description"
     content="Read the Privacy Policy for HabiTick. Learn how we collect, store, and protect your habit tracking and daily journal data." />
   <link rel="canonical" href="https://habitick.app/privacy" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="/habitick-blue-logo.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=DM+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <style>
     *,
@@ -40,8 +44,26 @@
       gap: 8px;
       text-decoration: none;
       color: #f9fafb;
+      font-family: 'Syne', sans-serif;
       font-weight: 800;
       font-size: 18px;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo-icon img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      border-radius: 8px;
     }
 
     main {
@@ -108,8 +130,9 @@
 
 <body>
   <header>
-    <a href="https://habitick.app">
-      <span style="font-size:20px">⚡</span> HabiTick
+    <a href="/">
+      <div class="logo-icon"><img src="habitick-blue-logo.png" alt="HabiTick Logo" /></div>
+      HabiTick
     </a>
   </header>
   <main>
@@ -171,7 +194,7 @@
 
     <h2>Contact</h2>
     <p>For privacy-related questions or data deletion requests, contact us at: <a
-        href="mailto:privacy@habitick.pro">privacy@habitick.pro</a></p>
+        href="mailto:privacy@habitick.app">privacy@habitick.app</a></p>
   </main>
 </body>
 
