@@ -4,27 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HabiTick — Habit Tracker App & Daily Routine Planner</title>
+  <title>HabiTick — Minimalist Habit Tracker App & Daily Routine Planner</title>
   <meta name="description"
-    content="A minimalist, guilt-free habit tracker featuring smart streaks, completion rate analytics, holiday mode, and a daily journal." />
+    content="The minimalist habit tracker app, daily routine planner & subscription-free TickTick alternative. Track habits, tasks, and streaks without guilt." />
   <link rel="canonical" href="https://habitick.app/" />
+  <meta name="keywords"
+    content="habit tracker app, daily routine planner, ticktick alternative, minimalist habit tracker, task app, streak tracker" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://habitick.app/" />
-  <meta property="og:title" content="HabiTick — Build Habits That Actually Stick" />
+  <meta property="og:title" content="HabiTick — Minimalist Habit Tracker App & Daily Routine Planner" />
   <meta property="og:description"
-    content="A minimalist, guilt-free habit tracker featuring smart streaks, completion rate analytics, holiday mode, and a daily journal." />
+    content="The minimalist habit tracker app, daily routine planner & subscription-free TickTick alternative. Track habits, tasks, and streaks without guilt." />
   <meta property="og:image" content="https://habitick.app/habitick-og-image.png" />
   <meta property="og:site_name" content="HabiTick" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://habitick.app/" />
-  <meta name="twitter:title" content="HabiTick — Build Habits That Actually Stick" />
+  <meta name="twitter:title" content="HabiTick — Minimalist Habit Tracker App & Daily Routine Planner" />
   <meta name="twitter:description"
-    content="A minimalist, guilt-free habit tracker featuring smart streaks, completion rate analytics, holiday mode, and a daily journal." />
+    content="The minimalist habit tracker app, daily routine planner & subscription-free TickTick alternative. Track habits, tasks, and streaks without guilt." />
   <meta name="twitter:image" content="https://habitick.app/habitick-og-image.png" />
 
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -64,7 +66,7 @@
         }
       ]
     },
-    "description": "A minimalist, guilt-free habit tracker featuring smart streaks, completion rates, holiday mode, and a daily journal.",
+    "description": "A minimalist, guilt-free habit tracker featuring smart streaks, completion rates, holiday mode, streak shields, and a daily journal.",
     "sameAs": [
       "https://x.com/habitick",
       "https://www.instagram.com/habitick/"
@@ -74,6 +76,62 @@
       "ratingValue": "4.9",
       "ratingCount": "128"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes HabiTick the best minimalist habit tracker app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HabiTick combines habit tracking and daily task management in one guilt-free interface. Unlike traditional habit apps that penalize you for missed days, HabiTick includes Smart Streaks, Streak Shields, and 48-hour backdating so your real progress is always protected."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is HabiTick a top TickTick alternative?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TickTick and other habit/task managers charge expensive monthly or yearly subscriptions. HabiTick offers a clean, focused habit tracker and task app for a single lifetime payment of £5.99 — pay once, own it forever without recurring fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do Streak Shields work in HabiTick?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Streak Shields are earned automatically by building consistent habits and completing tasks. If life gets busy or you take a break, a Streak Shield protects your hard-earned streak from resetting to zero."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is HabiTick available on Android and Web?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, HabiTick works in any browser at app.habitick.app and is available on the Google Play Store for Android devices."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is HabiTick available on iOS / iPhone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! HabiTick runs smoothly on all iOS devices (iPhone & iPad) via any browser at app.habitick.app. You can tap 'Add to Home Screen' in Safari for an instant app experience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is HabiTick free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! HabiTick is 100% free to start with unlimited habits, to-do lists, smart streak tracking, completion analytics, holiday mode, and daily mood journaling."
+        }
+      }
+    ]
   }
   </script>
   <style>
@@ -261,6 +319,176 @@
       padding: 14px 28px;
       font-size: 16px;
       border-radius: 10px;
+    }
+
+    /* ── Store Button ── */
+    .btn-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 22px;
+      border-radius: 10px;
+      background: #0f172a;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    [data-theme="dark"] .btn-store {
+      background: #1e293b;
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.16);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-store:hover {
+      transform: translateY(-2px);
+      background: #020617;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.28);
+      border-color: rgba(255, 255, 255, 0.28);
+      color: #ffffff;
+    }
+
+    [data-theme="dark"] .btn-store:hover {
+      background: #334155;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      border-color: rgba(255, 255, 255, 0.32);
+    }
+
+    .btn-store.btn-large {
+      padding: 10px 24px;
+      height: 52px;
+    }
+
+    .store-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .store-btn-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      line-height: 1.15;
+    }
+
+    .store-btn-sub {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+
+    .store-btn-main {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── FAQ Section ── */
+    .faq-section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 96px 48px;
+    }
+
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s;
+    }
+
+    .faq-item[open] {
+      border-color: var(--accent);
+    }
+
+    .faq-summary {
+      padding: 20px 24px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      font-size: 14px;
+      transition: transform 0.25s ease;
+      color: var(--accent);
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-content {
+      padding: 0 24px 20px;
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+
+    /* ── Download Section ── */
+    .download-section {
+      text-align: center;
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+    }
+
+    .download-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 32px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .download-box h2 {
+      margin: 0 auto 12px;
+    }
+
+    .download-box p {
+      color: var(--text-2);
+      max-width: 500px;
+      margin: 0 auto 32px;
+      font-size: 16px;
+    }
+
+    .download-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     /* ── Hero ── */
@@ -1025,11 +1253,13 @@
       <a href="#features">Features</a>
       <a href="#why">Why HabiTick</a>
       <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="/vs-ticktick" style="color:var(--accent); font-weight:700;">vs TickTick</a>
     </div>
     <div class="nav-actions">
       <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle theme">☀️</button>
       <a href="https://app.habitick.app" class="btn btn-ghost">Sign in</a>
-      <a href="https://app.habitick.app" class="btn btn-primary">Get Started Free</a>
+      <a href="https://app.habitick.app" class="btn btn-primary">Web App</a>
     </div>
   </nav>
   <!-- Hero -->
@@ -1038,12 +1268,26 @@
       <div class="hero-badge-dot"></div>
       The habit app that doesn't punish you
     </div>
-    <h1>The Minimalist <span>Habit Tracker App</span> for Daily Routines</h1>
+    <h1>The Minimalist <span>Habit Tracker App</span> & Daily Routine Planner</h1>
     <p class="hero-sub">A clean, guilt-free habit tracker and task manager in one place. Track your personal goals,
       build a better morning routine, and measure real consistency without the shame.</p>
     <div class="hero-cta">
-      <a href="https://app.habitick.app" class="btn btn-primary btn-large">Start for free →</a>
-      <a href="#features" class="btn btn-ghost btn-large">See how it works</a>
+      <a href="https://app.habitick.app" class="btn btn-primary btn-large">Web App →</a>
+      <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
+        rel="noopener noreferrer" class="btn-store btn-large">
+        <svg class="store-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#00E5FF"
+            d="M49.6 16.3C43.7 22.5 40.3 32.5 40.3 45.4v421.2c0 12.9 3.4 22.9 9.3 29.1l2.4 2.3L293.7 256v-5.3L52 14l-2.4 2.3z" />
+          <path fill="#00F076"
+            d="M377.3 339.6L293.7 256v-5.3l83.6-83.6 1 0.6 99.1 56.3c28.3 16.1 28.3 42.4 0 58.5l-99.1 56.3-1 0.8z" />
+          <path fill="#FF3A44" d="M378.3 338.8L293.7 254 52 495.7c9.5 10.1 25.1 11.3 43.2 1L378.3 338.8z" />
+          <path fill="#FFE000" d="M378.3 173.2L95.2 12.3C77.1 2 61.5 3.2 52 13.3L293.7 254l84.6-80.8z" />
+        </svg>
+        <div class="store-btn-text">
+          <span class="store-btn-sub">GET IT ON</span>
+          <span class="store-btn-main">Google Play</span>
+        </div>
+      </a>
     </div>
     <p class="hero-note">No credit card required &nbsp;·&nbsp; <strong>Lifetime Price: £5.99</strong></p>
   </div>
@@ -1171,10 +1415,11 @@
             medium, low — no complex project management needed.</div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📅</div>
-          <div class="feature-title">48hr Backdating</div>
-          <div class="feature-desc">Forgot to log yesterday? No worries. Mark completions up to 48 hours back so late
-            nights don't cost you your streak.</div>
+          <div class="feature-icon">🛡️</div>
+          <div class="feature-title">Streak Shields</div>
+          <div class="feature-desc">Forgot to complete a habit? No worries. By regularly completing habits and tasks,
+            you
+            can earn streak shields that protect your streak from rare misses.</div>
         </div>
       </div>
     </div>
@@ -1267,6 +1512,113 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section reveal">
+    <div style="text-align:center;">
+      <div class="section-label">✦ FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+      <p class="section-sub" style="margin:0 auto 16px;">Everything you need to know about HabiTick, pricing, and how it
+        compares to apps like TickTick.</p>
+    </div>
+    <div class="faq-grid">
+      <details class="faq-item" open>
+        <summary class="faq-summary">
+          <span>What makes HabiTick the best minimalist habit tracker app?</span>
+          <span class="faq-icon">▼</span>
+        </summary>
+        <div class="faq-content">
+          HabiTick combines habit tracking and daily task management in one minimalist, guilt-free interface. Unlike
+          traditional habit apps that penalise you for missed days, HabiTick includes Smart Streaks, Streak Shields, and
+          48-hour backdating so your real progress is always protected.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Why is HabiTick a top TickTick alternative?</span>
+          <span class="faq-icon">▼</span>
+        </summary>
+        <div class="faq-content">
+          TickTick and other productivity tools require expensive monthly or yearly subscriptions. HabiTick offers a
+          clean, focused habit tracker and task app for a single lifetime payment of £5.99 — pay once and use it forever
+          without recurring fees. Read our full <a href="/vs-ticktick"
+            style="color:var(--accent); font-weight:600;">HabiTick vs TickTick comparison</a>.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>How do Streak Shields work?</span>
+          <span class="faq-icon">▼</span>
+        </summary>
+        <div class="faq-content">
+          Streak Shields are earned automatically by building consistent habits and completing tasks. If life gets busy
+          or you take an unexpected rest day, a Streak Shield protects your hard-earned streak from resetting to zero.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Can I use HabiTick on both Web and Android?</span>
+          <span class="faq-icon">▼</span>
+        </summary>
+        <div class="faq-content">
+          Yes! HabiTick works in any web browser at <a href="https://app.habitick.app" target="_blank"
+            style="color:var(--accent); font-weight:600;">app.habitick.app</a> and is available as a native app on the
+          <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
+            style="color:var(--accent); font-weight:600;">Google Play Store</a> for Android devices.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Is HabiTick available on iOS / iPhone?</span>
+          <span class="faq-icon">▼</span>
+        </summary>
+        <div class="faq-content">
+          Yes! HabiTick runs smoothly on all iOS devices (iPhone & iPad) as a web app. Simply open <a
+            href="https://app.habitick.app" target="_blank"
+            style="color:var(--accent); font-weight:600;">app.habitick.app</a> in Safari, tap the Share button, and
+          select <strong>'Add to Home Screen'</strong> for an instant app experience. We are also working on a native
+          iOS App Store release!
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Is HabiTick free to use?</span>
+          <span class="faq-icon">▼</span>
+        </summary>
+        <div class="faq-content">
+          Yes! The Free plan gives you unlimited habit tracking, to-do task management, smart streak tracking,
+          completion analytics, holiday mode, and daily mood journaling. Upgrading to Pro (£5.99 lifetime) unlocks 5
+          Streak Shields and personalized AI insights, powered by Google Gemini!
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section class="download-section reveal">
+    <div class="download-box">
+      <h2>Build better habits anywhere</h2>
+      <p>Use HabiTick directly in your web browser, or get the native Android experience on Google Play.</p>
+      <div class="download-actions">
+        <a href="https://play.google.com/store/apps/details?id=app.habitick.twa" target="_blank"
+          rel="noopener noreferrer" class="btn-store btn-large">
+          <svg class="store-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#00E5FF"
+              d="M49.6 16.3C43.7 22.5 40.3 32.5 40.3 45.4v421.2c0 12.9 3.4 22.9 9.3 29.1l2.4 2.3L293.7 256v-5.3L52 14l-2.4 2.3z" />
+            <path fill="#00F076"
+              d="M377.3 339.6L293.7 256v-5.3l83.6-83.6 1 0.6 99.1 56.3c28.3 16.1 28.3 42.4 0 58.5l-99.1 56.3-1 0.8z" />
+            <path fill="#FF3A44" d="M378.3 338.8L293.7 254 52 495.7c9.5 10.1 25.1 11.3 43.2 1L378.3 338.8z" />
+            <path fill="#FFE000" d="M378.3 173.2L95.2 12.3C77.1 2 61.5 3.2 52 13.3L293.7 254l84.6-80.8z" />
+          </svg>
+          <div class="store-btn-text">
+            <span class="store-btn-sub">GET IT ON</span>
+            <span class="store-btn-main">Google Play</span>
+          </div>
+        </a>
+        <a href="https://app.habitick.app" class="btn btn-primary btn-large">Launch Web App →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <a href="/" class="footer-logo">
@@ -1274,6 +1626,9 @@
     </a>
     <div class="footer-links">
       <a href="https://app.habitick.app">App</a>
+      <a href="https://play.google.com/store/apps/details?id=app.habitick.twa" target="_blank"
+        rel="noopener noreferrer">Google Play</a>
+      <a href="/vs-ticktick" style="color:var(--accent); font-weight:600;">vs TickTick</a>
       <a href="/privacy">Privacy Policy</a>
       <a href="/terms">Terms of Service</a>
       <a href="/cdn-cgi/l/email-protection#1b737e7777745b737a79726f727870356b6974">Contact</a>

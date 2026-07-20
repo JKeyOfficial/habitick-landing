@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HabiTick vs TickTick — The Subscription-Free TickTick Alternative</title>
+  <meta name="description"
+    content="Compare HabiTick vs TickTick. Discover why HabiTick is the best minimalist, subscription-free TickTick alternative featuring smart streaks, streak shields, and £5.99 lifetime access." />
+  <link rel="canonical" href="https://habitick.app/vs-ticktick" />
+  <meta name="keywords"
+    content="ticktick alternative, habitick vs ticktick, habit tracker app, minimalist habit tracker, subscription-free task app, streak shields" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://habitick.app/vs-ticktick" />
+  <meta property="og:title" content="HabiTick vs TickTick — The Subscription-Free TickTick Alternative" />
+  <meta property="og:description"
+    content="Compare HabiTick vs TickTick. Discover why HabiTick is the best minimalist, subscription-free TickTick alternative featuring smart streaks, streak shields, and £5.99 lifetime access." />
+  <meta property="og:image" content="https://habitick.app/habitick-og-image.png" />
+  <meta property="og:site_name" content="HabiTick" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://habitick.app/vs-ticktick" />
+  <meta name="twitter:title" content="HabiTick vs TickTick — The Subscription-Free TickTick Alternative" />
+  <meta name="twitter:description"
+    content="Compare HabiTick vs TickTick. Discover why HabiTick is the best minimalist, subscription-free TickTick alternative featuring smart streaks, streak shields, and £5.99 lifetime access." />
+  <meta name="twitter:image" content="https://habitick.app/habitick-og-image.png" />
+
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="/habitick-blue-logo.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "HabiTick vs TickTick Comparison",
+    "description": "Side-by-side comparison of HabiTick and TickTick for habit tracking and daily routine planning.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "HabiTick",
+      "url": "https://habitick.app"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why switch from TickTick to HabiTick?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TickTick charges a recurring $35.99/year subscription fee and resets your streaks strictly on missed days. HabiTick costs £5.99 once for lifetime access and uses Smart Streaks & Streak Shields to protect real progress without guilt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does HabiTick include both habit tracking and tasks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, HabiTick integrates habit tracking, priority to-do lists, and daily mood journaling into one minimalist dashboard."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-2: #f7f8fa;
+      --bg-3: #eef0f4;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --text: #0f1117;
+      --text-2: #4b5563;
+      --text-3: #9ca3af;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --accent-2: #10b981;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.05), 0 20px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --bg-2: #111827;
+      --bg-3: #1f2937;
+      --card: #111827;
+      --border: #1f2937;
+      --text: #f9fafb;
+      --text-2: #9ca3af;
+      --text-3: #4b5563;
+      --accent: #3b82f6;
+      --accent-light: #1d4ed820;
+      --accent-2: #10b981;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.2), 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+      overflow-x: hidden;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .nav-logo-text {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-2);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-2);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-2);
+      border: 1px solid var(--border);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-large {
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    /* Store Button */
+    .btn-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 22px;
+      border-radius: 10px;
+      background: #0f172a;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+    }
+
+    [data-theme="dark"] .btn-store {
+      background: #1e293b;
+    }
+
+    .btn-store:hover {
+      transform: translateY(-2px);
+    }
+
+    .store-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .store-btn-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      line-height: 1.15;
+    }
+
+    .store-btn-sub {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+
+    .store-btn-main {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 48px 60px;
+      text-align: center;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, var(--accent-light), transparent);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--accent-light);
+      border: 1px solid var(--accent)30;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      max-width: 840px;
+      margin: 0 auto 20px;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--text-2);
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Comparison Table */
+    .comparison-section {
+      padding: 64px 48px 96px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .table-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+
+    th {
+      background: var(--bg-2);
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    th.highlight {
+      color: var(--accent);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .check {
+      color: var(--accent-2);
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .cross {
+      color: #ef4444;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    /* Why Section */
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 48px auto 0;
+    }
+
+    .reason-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .reason-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .reason-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .reason-desc {
+      font-size: 14px;
+      color: var(--text-2);
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 48px;
+      border-top: 1px solid var(--border);
+      background: var(--bg-2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-3);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
+
+      nav,
+      .hero,
+      .comparison-section,
+      footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .reasons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      th,
+      td {
+        padding: 12px 14px;
+        font-size: 13px;
+      }
+    }
+  </style>
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon"><img src="habitick-blue-logo.png" alt="HabiTick Logo" /></div>
+      <span class="nav-logo-text">HabiTick</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle theme">☀️</button>
+      <a href="https://app.habitick.app" class="btn btn-primary">Web App →</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">
+      ✦ HabiTick vs TickTick
+    </div>
+    <h1>The Minimalist, <span>Subscription-Free</span> TickTick Alternative</h1>
+    <p class="hero-sub">Tired of paying $35.99/year just to track habits and daily tasks? HabiTick offers smart streak
+      shields, guilt-free rest days, and £5.99 lifetime access.</p>
+    <div class="hero-cta">
+      <a href="https://app.habitick.app" class="btn btn-primary btn-large">Launch Web App →</a>
+      <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
+        rel="noopener noreferrer" class="btn-store btn-large">
+        <svg class="store-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#00E5FF"
+            d="M49.6 16.3C43.7 22.5 40.3 32.5 40.3 45.4v421.2c0 12.9 3.4 22.9 9.3 29.1l2.4 2.3L293.7 256v-5.3L52 14l-2.4 2.3z" />
+          <path fill="#00F076"
+            d="M377.3 339.6L293.7 256v-5.3l83.6-83.6 1 0.6 99.1 56.3c28.3 16.1 28.3 42.4 0 58.5l-99.1 56.3-1 0.8z" />
+          <path fill="#FF3A44" d="M378.3 338.8L293.7 254 52 495.7c9.5 10.1 25.1 11.3 43.2 1L378.3 338.8z" />
+          <path fill="#FFE000" d="M378.3 173.2L95.2 12.3C77.1 2 61.5 3.2 52 13.3L293.7 254l84.6-80.8z" />
+        </svg>
+        <div class="store-btn-text">
+          <span class="store-btn-sub">GET IT ON</span>
+          <span class="store-btn-main">Google Play</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Comparison Matrix -->
+  <section class="comparison-section">
+    <div style="text-align:center; margin-bottom: 36px;">
+      <h2>Side-by-Side Comparison</h2>
+      <p style="color:var(--text-2);">See how HabiTick compares to TickTick Premium</p>
+    </div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="highlight">HabiTick</th>
+            <th>TickTick</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pricing Model</strong></td>
+            <td><strong style="color:var(--accent-2)">£5.99 Lifetime</strong> (or Free)</td>
+            <td>$35.99 / year recurring</td>
+          </tr>
+          <tr>
+            <td><strong>Guilt-Free Streaks</strong></td>
+            <td><span class="check">✓</span> Rest days & holidays don't reset streaks</td>
+            <td><span class="cross">✕</span> Strict daily streak breaks</td>
+          </tr>
+          <tr>
+            <td><strong>Streak Shields</strong></td>
+            <td><span class="check">✓</span> Earn shields to protect missed days</td>
+            <td><span class="cross">✕</span> None</td>
+          </tr>
+          <tr>
+            <td><strong>Daily Journal</strong></td>
+            <td><span class="check">✓</span> Built-in mood & text journal</td>
+            <td><span class="cross">✕</span> Not included</td>
+          </tr>
+          <tr>
+            <td><strong>Minimalist & Fast Interface</strong></td>
+            <td><span class="check">✓</span> Clean, 0 clutter, ultra-fast</td>
+            <td><span class="cross">✕</span> Feature bloat & complex menus</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <div class="reason-icon">💸</div>
+        <div class="reason-title">Pay Once, Own Forever</div>
+        <div class="reason-desc">No monthly subscriptions or recurring fees. £5.99 grants you lifetime access to all Pro
+          features forever.</div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">🛡️</div>
+        <div class="reason-title">Streak Protection</div>
+        <div class="reason-desc">Life happens. Streak Shields protect your momentum when work, travel, or rest days get
+          in the way.</div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">⚡</div>
+        <div class="reason-title">Zero Bloat</div>
+        <div class="reason-desc">Habits + To-Do tasks in one clean daily view. Open the app, mark your progress, get on
+          with your day.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="/" class="footer-logo">
+      <img src="habitick-blue-logo.png" alt="HabiTick Logo" width="32" height="32" /> HabiTick
+    </a>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="https://app.habitick.app">App</a>
+      <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
+        rel="noopener noreferrer">Google Play</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+    </div>
+    <div style="font-size:12px; color:var(--text-3);">© 2026 HabiTick. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+    const btn = document.getElementById('themeBtn');
+    const saved = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', saved);
+    if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+    function toggleTheme() {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+    }
+  </script>
+</body>
+
+</html>
