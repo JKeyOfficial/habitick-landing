@@ -89,16 +89,16 @@
   </script>
   <style>
     :root {
-      --bg: #0d1117;
-      --bg-2: #111827;
-      --bg-3: #1f2937;
-      --card: #111827;
-      --border: #1f2937;
+      --bg: #0a0f1a;
+      --bg-2: #0f172a;
+      --bg-3: #1e293b;
+      --card: rgba(17, 24, 39, 0.7);
+      --border: rgba(255, 255, 255, 0.08);
       --text: #f9fafb;
       --text-2: #9ca3af;
       --text-3: #4b5563;
       --accent: #3b82f6;
-      --accent-light: #1d4ed820;
+      --accent-light: rgba(59, 130, 246, 0.12);
       --accent-2: #10b981;
       --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.2);
       --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.2), 0 20px 60px rgba(0, 0, 0, 0.4);
@@ -326,10 +326,22 @@
       padding: 64px 48px 96px;
       max-width: 1000px;
       margin: 0 auto;
+      position: relative;
+    }
+
+    .comparison-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 65% 55% at 50% 30%, rgba(37, 99, 235, 0.12), transparent 70%);
+      pointer-events: none;
     }
 
     .table-card {
+      position: relative;
+      z-index: 2;
       background: var(--card);
+      backdrop-filter: blur(16px);
       border: 1px solid var(--border);
       border-radius: 16px;
       box-shadow: var(--shadow-lg);
@@ -350,7 +362,7 @@
     }
 
     th {
-      background: var(--bg-2);
+      background: rgba(15, 23, 42, 0.8);
       font-family: 'Syne', sans-serif;
       font-weight: 800;
       font-size: 18px;
@@ -379,6 +391,8 @@
 
     /* Why Section */
     .reasons-grid {
+      position: relative;
+      z-index: 2;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
@@ -388,10 +402,17 @@
 
     .reason-card {
       background: var(--card);
+      backdrop-filter: blur(12px);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 24px;
       box-shadow: var(--shadow);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .reason-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(59, 130, 246, 0.25);
     }
 
     .reason-icon {
@@ -413,9 +434,11 @@
 
     /* Footer */
     footer {
+      position: relative;
+      z-index: 2;
       padding: 40px 48px;
       border-top: 1px solid var(--border);
-      background: var(--bg-2);
+      background: rgba(10, 15, 26, 0.95);
       display: flex;
       align-items: center;
       justify-content: space-between;
