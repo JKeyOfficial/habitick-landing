@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -148,22 +148,6 @@
   </script>
   <style>
     :root {
-      --bg: #ffffff;
-      --bg-2: #f7f8fa;
-      --bg-3: #eef0f4;
-      --card: #ffffff;
-      --border: #e5e7eb;
-      --text: #0f1117;
-      --text-2: #4b5563;
-      --text-3: #9ca3af;
-      --accent: #2563eb;
-      --accent-light: #eff6ff;
-      --accent-2: #10b981;
-      --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.06);
-      --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.05), 0 20px 60px rgba(0, 0, 0, 0.1);
-    }
-
-    [data-theme="dark"] {
       --bg: #0d1117;
       --bg-2: #111827;
       --bg-3: #1f2937;
@@ -276,24 +260,7 @@
       gap: 12px;
     }
 
-    .theme-toggle {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--bg-2);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      transition: all 0.2s;
-      color: var(--text-2);
-    }
 
-    .theme-toggle:hover {
-      background: var(--bg-3);
-    }
 
     .btn {
       display: inline-flex;
@@ -345,35 +312,22 @@
       gap: 12px;
       padding: 10px 22px;
       border-radius: 10px;
-      background: #0f172a;
+      background: #1e293b;
       color: #ffffff;
       text-decoration: none;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
       cursor: pointer;
       font-family: inherit;
     }
 
-    [data-theme="dark"] .btn-store {
-      background: #1e293b;
-      color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.16);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-    }
-
     .btn-store:hover {
       transform: translateY(-2px);
-      background: #020617;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.28);
-      border-color: rgba(255, 255, 255, 0.28);
-      color: #ffffff;
-    }
-
-    [data-theme="dark"] .btn-store:hover {
       background: #334155;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
       border-color: rgba(255, 255, 255, 0.32);
+      color: #ffffff;
     }
 
     .btn-store.btn-large {
@@ -1033,7 +987,7 @@
       color: var(--text);
       max-width: 600px;
       line-height: 1.15;
-      margin-bottom: 16px;
+      margin: 0 auto 16px;
     }
 
     .section-sub {
@@ -1041,7 +995,7 @@
       color: var(--text-2);
       max-width: 480px;
       line-height: 1.6;
-      margin-bottom: 56px;
+      margin: 0 auto 56px;
     }
 
     .features-grid {
@@ -1498,7 +1452,6 @@
       <a href="/habitick-vs-ticktick">Us vs TickTick</a>
     </div>
     <div class="nav-actions">
-      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle theme">☀️</button>
       <a href="https://app.habitick.app" class="btn btn-ghost">Sign in</a>
       <a href="https://app.habitick.app" class="btn btn-primary">Web App</a>
     </div>
@@ -1554,7 +1507,7 @@
       <div class="hero-phone">
         <div class="hero-phone-glow"></div>
         <img src="phone_upscayl_2x_upscayl-standard-4x.png"
-          alt="HabiTick habit tracker app on iPhone showing daily habits, streaks, and task management"
+          alt="HabiTick minimalist habit tracker app interface showing daily routine planner, smart streaks, and task manager on mobile"
           class="hero-phone-img" width="380" height="680" loading="eager" />
       </div>
     </div>
@@ -1721,7 +1674,7 @@
   <section id="faq" class="faq-section reveal">
     <div style="text-align:center;">
       <div class="section-label">FAQ</div>
-      <h2>Frequently Asked Questions</h2>
+      <h2 style="margin:0 auto 16px;">Frequently Asked Questions</h2>
       <p class="section-sub" style="margin:0 auto 16px;">Everything you need to know about HabiTick, pricing, and how it
         compares to apps like TickTick.</p>
     </div>
@@ -1805,7 +1758,7 @@
       <h2>Build better habits anywhere</h2>
       <p>Use HabiTick directly in your web browser, or get the native Android experience on Google Play.</p>
       <div class="download-actions">
-        <a href="https://play.google.com/store/apps/details?id=app.habitick.twa" target="_blank"
+        <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
           rel="noopener noreferrer" class="btn-store btn-large">
           <svg class="store-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
             <path fill="#00E5FF"
@@ -1874,29 +1827,49 @@
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
-    // Theme toggle
-    const html = document.documentElement;
-    const btn = document.getElementById('themeBtn');
-    const saved = localStorage.getItem('theme') || 'light';
-    html.setAttribute('data-theme', saved);
-    btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+    function smoothScrollTo(targetPosition, duration = 850) {
+      const startPosition = window.pageYOffset || document.documentElement.scrollTop;
+      const distance = targetPosition - startPosition;
+      let startTime = null;
 
-    function toggleTheme() {
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+      function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = progress < 0.5 
+          ? 4 * progress * progress * progress 
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+        window.scrollTo(0, startPosition + distance * ease);
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      }
+
+      requestAnimationFrame(animation);
     }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href*="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          e.preventDefault();
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const href = this.getAttribute('href');
+        const hashIndex = href.indexOf('#');
+        if (hashIndex === -1) return;
+        const targetId = href.substring(hashIndex);
+        if (!targetId || targetId === '#') return;
+
+        const pathPart = href.substring(0, hashIndex);
+        const isCurrentPage = !pathPart || pathPart === '/' || pathPart === window.location.pathname;
+
+        if (isCurrentPage) {
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            const navOffset = 70;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+            smoothScrollTo(offsetPosition, 850);
+          }
         }
       });
     });
