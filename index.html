@@ -61,7 +61,7 @@
       "@type": "AggregateOffer",
       "priceCurrency": "GBP",
       "lowPrice": "0.00",
-      "highPrice": "5.99",
+      "highPrice": "12.99",
       "offers": [
         {
           "@type": "Offer",
@@ -71,7 +71,13 @@
         },
         {
           "@type": "Offer",
-          "price": "5.99",
+          "price": "0.99",
+          "priceCurrency": "GBP",
+          "name": "Pro Monthly Tier"
+        },
+        {
+          "@type": "Offer",
+          "price": "12.99",
           "priceCurrency": "GBP",
           "name": "Pro Lifetime Tier"
         }
@@ -107,7 +113,7 @@
         "name": "Why is HabiTick a top TickTick alternative?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "TickTick and other habit/task managers charge expensive monthly or yearly subscriptions. HabiTick offers a clean, focused habit tracker and task app for a single lifetime payment of £5.99 — pay once, own it forever without recurring fees."
+          "text": "TickTick and other habit/task managers charge expensive monthly or yearly subscriptions. HabiTick offers a clean, focused habit tracker and task app starting from 99p/mo or a single lifetime payment of £12.99 — pay monthly or own it forever."
         }
       },
       {
@@ -176,6 +182,11 @@
       --accent-2: #10b981;
       --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.2);
       --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.2), 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
     }
 
     *,
@@ -504,85 +515,252 @@
 
     /* ── Hero ── */
     .hero {
-      padding: 96px 48px 80px;
-      text-align: center;
       position: relative;
       overflow: hidden;
+      background: #0a0f1a;
+      color: #f9fafb;
+      height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      padding: 0;
     }
 
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 80% 50% at 50% 0%, var(--accent-light), transparent);
+      background:
+        radial-gradient(ellipse 60% 50% at 70% 50%, rgba(37, 99, 235, 0.12), transparent 70%),
+        radial-gradient(ellipse 40% 60% at 30% 20%, rgba(37, 99, 235, 0.06), transparent 60%);
       pointer-events: none;
     }
 
-    .hero-badge {
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      max-width: 1320px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 64px;
+      gap: 32px;
+      height: 100%;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .hero-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 14px;
+      padding: 5px 14px 5px 6px;
       border-radius: 999px;
-      background: var(--accent-light);
-      border: 1px solid var(--accent)30;
-      color: var(--accent);
-      font-size: 13px;
+      background: rgba(37, 99, 235, 0.1);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      color: #60a5fa;
+      font-size: 12px;
       font-weight: 600;
-      margin-bottom: 28px;
-      animation: fadeUp 0.6s ease both;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
     }
 
-    .hero-badge-dot {
+    .hero-eyebrow-dot {
       width: 6px;
       height: 6px;
-      background: var(--accent-2);
       border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
     }
 
     h1 {
       font-family: 'Syne', sans-serif;
-      font-size: clamp(40px, 6vw, 72px);
       font-weight: 800;
       line-height: 1.08;
       letter-spacing: -0.03em;
       color: var(--text);
-      max-width: 800px;
-      margin: 0 auto 20px;
-      animation: fadeUp 0.6s 0.1s ease both;
     }
 
     h1 span {
       color: var(--accent);
     }
 
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 4.2vw, 58px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: #f9fafb;
+      max-width: 680px;
+      margin: 0 0 18px;
+      text-align: left;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+
+    .hero h1 span {
+      color: #3b82f6;
+    }
+
     .hero-sub {
-      font-size: 18px;
-      color: var(--text-2);
+      font-size: 15px;
+      color: #9ca3af;
       max-width: 520px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
-      animation: fadeUp 0.6s 0.2s ease both;
+      margin: 0 0 28px;
+      line-height: 1.65;
+      text-align: left;
+      animation: fadeUp 0.7s 0.2s ease both;
     }
 
     .hero-cta {
       display: flex;
-      gap: 12px;
-      justify-content: center;
+      gap: 14px;
       align-items: center;
       flex-wrap: wrap;
-      margin-bottom: 16px;
-      animation: fadeUp 0.6s 0.3s ease both;
+      margin-bottom: 14px;
+      animation: fadeUp 0.7s 0.3s ease both;
     }
 
     .hero-note {
-      color: var(--text-3);
+      color: #6b7280;
       font-size: 13px;
-      animation: fadeUp 0.6s 0.35s ease both;
+      margin-bottom: 28px;
+      animation: fadeUp 0.7s 0.35s ease both;
     }
 
     .hero-note strong {
-      color: var(--accent-2);
+      color: #10b981;
+    }
+
+    /* ── Hero Trust Bar ── */
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      animation: fadeUp 0.7s 0.45s ease both;
+    }
+
+    .hero-trust-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-trust-stars {
+      display: flex;
+      gap: 2px;
+      color: #facc15;
+      font-size: 14px;
+    }
+
+    .hero-trust-score {
+      font-weight: 700;
+      font-size: 14px;
+      color: #e5e7eb;
+    }
+
+    .hero-trust-count {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .hero-trust-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-trust-badges {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .hero-trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #9ca3af;
+      font-weight: 500;
+    }
+
+    .hero-trust-badge-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(37, 99, 235, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: #60a5fa;
+      flex-shrink: 0;
+    }
+
+    /* ── Hero Phone ── */
+    .hero-phone {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      align-self: stretch;
+      animation: fadeUp 0.9s 0.2s ease both;
+      padding-top: 0;
+    }
+
+    .hero-phone-glow {
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.18) 0%, rgba(37, 99, 235, 0.06) 50%, transparent 70%);
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-phone-img {
+      position: relative;
+      z-index: 1;
+      height: calc(100vh - 80px);
+      max-height: 820px;
+      width: auto;
+      filter: drop-shadow(0 32px 64px rgba(0, 0, 0, 0.5)) drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
+      object-fit: contain;
+    }
+
+    /* Hero override: force dark appearance regardless of theme */
+    .hero .btn-ghost {
+      background: transparent;
+      color: #d1d5db;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hero .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #f9fafb;
+    }
+
+    .hero .btn-store {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .hero .btn-store:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
     }
 
     /* ── App Preview ── */
@@ -1192,7 +1370,64 @@
       }
 
       .hero {
-        padding: 64px 20px 48px;
+        height: auto;
+        padding: 0;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 48px 20px 0;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero-content {
+        align-items: center;
+      }
+
+      .hero h1 {
+        text-align: center;
+        font-size: clamp(32px, 8vw, 48px);
+      }
+
+      .hero-sub {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .hero-note {
+        text-align: center;
+      }
+
+      .hero-trust {
+        justify-content: center;
+      }
+
+      .hero-trust-divider {
+        display: none;
+      }
+
+      .hero-trust-badges {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-phone {
+        align-self: center;
+      }
+
+      .hero-phone-img {
+        max-height: 480px;
+      }
+
+      .hero-phone-glow {
+        width: 300px;
+        height: 300px;
       }
 
       .preview-wrap {
@@ -1273,96 +1508,65 @@
       <a href="https://app.habitick.app" class="btn btn-primary">Web App</a>
     </div>
   </nav>
+
   <!-- Hero -->
   <div class="hero">
-    <div class="hero-badge">
-      <div class="hero-badge-dot"></div>
-      The habit app that doesn't punish you
-    </div>
-    <h1>The Minimalist <span>Habit Tracker App</span> & Daily Routine Planner</h1>
-    <p class="hero-sub">A clean, guilt-free habit tracker and task manager in one place. Track your personal goals,
-      build a better morning routine, and measure real consistency without the shame.</p>
-    <div class="hero-cta">
-      <a href="https://app.habitick.app" class="btn btn-primary btn-large">Web App →</a>
-      <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
-        rel="noopener noreferrer" class="btn-store btn-large">
-        <svg class="store-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#00E5FF"
-            d="M49.6 16.3C43.7 22.5 40.3 32.5 40.3 45.4v421.2c0 12.9 3.4 22.9 9.3 29.1l2.4 2.3L293.7 256v-5.3L52 14l-2.4 2.3z" />
-          <path fill="#00F076"
-            d="M377.3 339.6L293.7 256v-5.3l83.6-83.6 1 0.6 99.1 56.3c28.3 16.1 28.3 42.4 0 58.5l-99.1 56.3-1 0.8z" />
-          <path fill="#FF3A44" d="M378.3 338.8L293.7 254 52 495.7c9.5 10.1 25.1 11.3 43.2 1L378.3 338.8z" />
-          <path fill="#FFE000" d="M378.3 173.2L95.2 12.3C77.1 2 61.5 3.2 52 13.3L293.7 254l84.6-80.8z" />
-        </svg>
-        <div class="store-btn-text">
-          <span class="store-btn-sub">GET IT ON</span>
-          <span class="store-btn-main">Google Play</span>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-dot"></div>
+          Simple. Focused. Effective.
         </div>
-      </a>
-    </div>
-    <p class="hero-note">No credit card required &nbsp;·&nbsp; <strong>Lifetime Price: £5.99</strong></p>
-  </div>
-
-  <!-- App Preview -->
-  <div class="preview-wrap reveal">
-    <div class="preview-frame">
-      <div class="preview-bar">
-        <div class="preview-dot" style="background:#ef4444"></div>
-        <div class="preview-dot" style="background:#f59e0b"></div>
-        <div class="preview-dot" style="background:#10b981"></div>
-        <div class="preview-url">app.habitick.app</div>
+        <h1>The Minimalist <span>Habit Tracker App</span> &amp; Daily Routine Planner</h1>
+        <p class="hero-sub">A clean, guilt-free habit tracker and task manager in one place. Track your personal goals,
+          build a better morning routine, and measure real consistency without the shame.</p>
+        <div class="hero-cta">
+          <a href="https://app.habitick.app" class="btn btn-primary btn-large">Web App →</a>
+          <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
+            rel="noopener noreferrer" class="btn-store btn-large">
+            <svg class="store-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#00E5FF"
+                d="M49.6 16.3C43.7 22.5 40.3 32.5 40.3 45.4v421.2c0 12.9 3.4 22.9 9.3 29.1l2.4 2.3L293.7 256v-5.3L52 14l-2.4 2.3z" />
+              <path fill="#00F076"
+                d="M377.3 339.6L293.7 256v-5.3l83.6-83.6 1 0.6 99.1 56.3c28.3 16.1 28.3 42.4 0 58.5l-99.1 56.3-1 0.8z" />
+              <path fill="#FF3A44" d="M378.3 338.8L293.7 254 52 495.7c9.5 10.1 25.1 11.3 43.2 1L378.3 338.8z" />
+              <path fill="#FFE000" d="M378.3 173.2L95.2 12.3C77.1 2 61.5 3.2 52 13.3L293.7 254l84.6-80.8z" />
+            </svg>
+            <div class="store-btn-text">
+              <span class="store-btn-sub">GET IT ON</span>
+              <span class="store-btn-main">Google Play</span>
+            </div>
+          </a>
+        </div>
+        <p class="hero-note">No credit card required &nbsp;·&nbsp; <strong>99p/mo or £12.99 lifetime</strong></p>
+        <div class="hero-trust">
+          <div class="hero-trust-rating">
+            <div class="hero-trust-stars">★★★★★</div>
+            <span class="hero-trust-score">4.9/5</span>
+            <span class="hero-trust-count">from 2,000+ happy users</span>
+          </div>
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-badges">
+            <div class="hero-trust-badge">
+              <div class="hero-trust-badge-icon">🔒</div>
+              Privacy First
+            </div>
+            <div class="hero-trust-badge">
+              <div class="hero-trust-badge-icon">🛡</div>
+              Streak Protection
+            </div>
+            <div class="hero-trust-badge">
+              <div class="hero-trust-badge-icon">⚡</div>
+              Works Offline
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="preview-inner">
-        <div class="preview-header">
-          <div class="preview-logo"><img src="habitick-blue-logo.png" alt="HabiTick App Dashboard Preview" /> HabiTick
-          </div>
-          <div class="preview-pills">
-            <div class="preview-pill green">✓ 3/3 habits today</div>
-            <div class="preview-pill blue">🔥 Streak: 14 days</div>
-          </div>
-        </div>
-        <div class="preview-tabs">
-          <div class="preview-tab active">Tasks & Habits</div>
-          <div class="preview-tab">Analytics</div>
-          <div class="preview-tab">Journal</div>
-        </div>
-        <div class="preview-cards">
-          <div class="preview-card">
-            <div class="preview-card-label">🔥 Current Streak</div>
-            <div class="preview-card-val">14</div>
-            <div class="preview-card-sub">days in a row</div>
-          </div>
-          <div class="preview-card">
-            <div class="preview-card-label">📊 Completion Rate</div>
-            <div class="preview-card-val">87%</div>
-            <div class="preview-card-sub">42 total completions</div>
-          </div>
-          <div class="preview-card">
-            <div class="preview-card-label">🏆 Best Streak</div>
-            <div class="preview-card-val">21</div>
-            <div class="preview-card-sub">personal record</div>
-          </div>
-        </div>
-        <div class="preview-habit">
-          <div class="preview-habit-info">
-            <div class="preview-habit-dot green"></div>
-            <div>
-              <div class="preview-habit-name">Morning Run</div>
-              <div class="preview-habit-freq">Daily</div>
-            </div>
-          </div>
-          <div class="preview-habit-done">✓ Done!</div>
-        </div>
-        <div class="preview-habit">
-          <div class="preview-habit-info">
-            <div class="preview-habit-dot"></div>
-            <div>
-              <div class="preview-habit-name">Read 20 pages</div>
-              <div class="preview-habit-freq">Daily</div>
-            </div>
-          </div>
-          <div class="preview-habit-btn">Mark Done</div>
-        </div>
+      <div class="hero-phone">
+        <div class="hero-phone-glow"></div>
+        <img src="phone_upscayl_2x_upscayl-standard-4x.png"
+          alt="HabiTick habit tracker app on iPhone showing daily habits, streaks, and task management"
+          class="hero-phone-img" width="380" height="680" loading="eager" />
       </div>
     </div>
   </div>
@@ -1370,8 +1574,8 @@
   <!-- Stats -->
   <div class="stats-strip reveal">
     <div class="stat">
-      <div class="stat-val">£5.99<span></span></div>
-      <div class="stat-label">forever</div>
+      <div class="stat-val">99p<span>/mo</span></div>
+      <div class="stat-label">or £12.99 lifetime</div>
     </div>
     <div class="stat">
       <div class="stat-val">4x</div>
@@ -1390,7 +1594,7 @@
   <!-- Features -->
   <section id="features">
     <div style="text-align:center; max-width:1100px; margin:0 auto;">
-      <div class="section-label">✦ Features</div>
+      <div class="section-label">Features</div>
       <h2 style="margin:0 auto 16px;">A Complete Routine Planner & Habit Building Tool</h2>
       <p class="section-sub" style="margin:0 auto 56px;">Everything you need to track daily habits and stay accountable,
         without the bloat.</p>
@@ -1440,7 +1644,7 @@
   <section id="why" class="diff-section">
     <div class="diff-grid reveal">
       <div>
-        <div class="section-label">✦ Why HabiTick</div>
+        <div class="section-label">Why HabiTick</div>
         <h2>Built different.<br />Priced fair.</h2>
         <p class="section-sub">Most habit apps are either too complex, too expensive, or too quick to shame you.
           HabiTick is none of those things.</p>
@@ -1459,9 +1663,9 @@
           <div class="diff-card-icon">💸</div>
           <div>
             <div class="diff-card-title">Radically affordable</div>
-            <div class="diff-card-desc">£5.99 forever. Less than two months of similar platforms, such as TickTick
-              premium.
-              price is locked in for you forever.</div>
+            <div class="diff-card-desc">Less than your morning coffee — 99p/mo or £12.99 lifetime. Fraction of the price
+              of similar platforms, such as TickTick
+              premium. Price is locked in for you.</div>
           </div>
         </div>
         <div class="diff-card">
@@ -1478,8 +1682,8 @@
 
   <!-- Pricing -->
   <section id="pricing" class="pricing-section">
-    <div class="section-label">✦ Pricing</div>
-    <h2 style="margin:0 auto 12px;">Simple, honest pricing</h2>
+    <div class="section-label">Pricing</div>
+    <h2 style="margin:0 auto 12px;">Less than your morning coffee</h2>
     <p class="section-sub" style="margin:0 auto 48px;">Sign up free. No credit card required. Upgrade when you're ready.
     </p>
     <div class="pricing-cards reveal">
@@ -1504,8 +1708,9 @@
       </div>
       <div class="pricing-card featured">
         <div class="pricing-plan">Pro</div>
-        <div class="pricing-price">£5.99<span></span></div>
-        <div class="pricing-note" style="color:var(--text-3)">Lifetime</div>
+        <div class="pricing-price">99p<span style="font-size:16px; font-weight:500; color:var(--text-2);">/mo</span>
+        </div>
+        <div class="pricing-note" style="color:var(--text-3)">or £12.99 lifetime</div>
         <div class="pricing-divider"></div>
         <ul class="pricing-features">
           <li>Unlimited habits</li>
@@ -1517,8 +1722,8 @@
           <li>5 Streak Shields</li>
           <li>Personalised AI insights</li>
         </ul>
-        <a href="https://app.habitick.app" class="btn btn-primary" style="width:100%; justify-content:center;">Start for
-          £5.99 →</a>
+        <a href="https://app.habitick.app" class="btn btn-primary" style="width:100%; justify-content:center;">Start
+          from 99p/mo →</a>
       </div>
     </div>
   </section>
@@ -1526,7 +1731,7 @@
   <!-- FAQ Section -->
   <section id="faq" class="faq-section reveal">
     <div style="text-align:center;">
-      <div class="section-label">✦ FAQ</div>
+      <div class="section-label">FAQ</div>
       <h2>Frequently Asked Questions</h2>
       <p class="section-sub" style="margin:0 auto 16px;">Everything you need to know about HabiTick, pricing, and how it
         compares to apps like TickTick.</p>
@@ -1550,9 +1755,9 @@
         </summary>
         <div class="faq-content">
           TickTick and other productivity tools require expensive monthly or yearly subscriptions. HabiTick offers a
-          clean, focused habit tracker and task app for a single lifetime payment of £5.99 — pay once and use it forever
-          without recurring fees. Read our full <a href="/vs-ticktick"
-            style="color:var(--accent); font-weight:600;">HabiTick vs TickTick comparison</a>.
+          clean, focused habit tracker and task app from 99p/mo or a single lifetime payment of £12.99 — pay monthly or
+          use it forever. Read our full <a href="/vs-ticktick" style="color:var(--accent); font-weight:600;">HabiTick vs
+            TickTick comparison</a>.
         </div>
       </details>
       <details class="faq-item">
@@ -1597,7 +1802,8 @@
         </summary>
         <div class="faq-content">
           Yes! The Free plan gives you unlimited habit tracking, to-do task management, smart streak tracking,
-          completion analytics, holiday mode, and daily mood journaling. Upgrading to Pro (£5.99 lifetime) unlocks 5
+          completion analytics, holiday mode, and daily mood journaling. Upgrading to Pro (99p/mo or £12.99 lifetime)
+          unlocks 5
           Streak Shields and personalized AI insights, powered by Google Gemini!
         </div>
       </details>
@@ -1691,8 +1897,20 @@
       const next = current === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
-      btn.textContent = next === 'dark' ? '☀️' : '🌙';
+      if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
     }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
 
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {

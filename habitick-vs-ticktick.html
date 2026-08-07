@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HabiTick vs TickTick — The Subscription-Free TickTick Alternative</title>
   <meta name="description"
-    content="Compare HabiTick vs TickTick. Discover why HabiTick is the best minimalist, subscription-free TickTick alternative featuring smart streaks, streak shields, and £5.99 lifetime access." />
+    content="Compare HabiTick vs TickTick. Discover why HabiTick is the best minimalist, subscription-free TickTick alternative featuring smart streaks, streak shields, and 99p/mo or £12.99 lifetime access." />
   <link rel="canonical" href="https://habitick.app/vs-ticktick" />
   <meta name="keywords"
     content="ticktick alternative, habitick vs ticktick, habit tracker app, minimalist habit tracker, subscription-free task app, streak shields" />
@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://habitick.app/vs-ticktick" />
   <meta property="og:title" content="HabiTick vs TickTick — The Subscription-Free TickTick Alternative" />
   <meta property="og:description"
-    content="Compare HabiTick vs TickTick. Discover why HabiTick is the best minimalist, subscription-free TickTick alternative featuring smart streaks, streak shields, and £5.99 lifetime access." />
+    content="Compare HabiTick vs TickTick. Discover why HabiTick is the best minimalist, subscription-free TickTick alternative featuring smart streaks, streak shields, and 99p/mo or £12.99 lifetime access." />
   <meta property="og:image" content="https://habitick.app/habitick-og-image.png" />
   <meta property="og:image:secure_url" content="https://habitick.app/habitick-og-image.png" />
   <meta property="og:image:type" content="image/png" />
@@ -36,7 +36,7 @@
   <meta name="twitter:url" content="https://habitick.app/vs-ticktick" />
   <meta name="twitter:title" content="HabiTick vs TickTick — The Subscription-Free TickTick Alternative" />
   <meta name="twitter:description"
-    content="Compare HabiTick vs TickTick. Discover why HabiTick is the best minimalist, subscription-free TickTick alternative featuring smart streaks, streak shields, and £5.99 lifetime access." />
+    content="Compare HabiTick vs TickTick. Discover why HabiTick is the best minimalist, subscription-free TickTick alternative featuring smart streaks, streak shields, and 99p/mo or £12.99 lifetime access." />
   <meta name="twitter:image" content="https://habitick.app/habitick-og-image.png" />
   <meta name="twitter:image:alt" content="HabiTick vs TickTick Comparison" />
 
@@ -73,7 +73,7 @@
         "name": "Why switch from TickTick to HabiTick?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "TickTick charges a recurring $35.99/year subscription fee and resets your streaks strictly on missed days. HabiTick costs £5.99 once for lifetime access and uses Smart Streaks & Streak Shields to protect real progress without guilt."
+          "text": "TickTick charges a recurring $35.99/year subscription fee and resets your streaks strictly on missed days. HabiTick costs 99p/mo or £12.99 for lifetime access and uses Smart Streaks & Streak Shields to protect real progress without guilt."
         }
       },
       {
@@ -118,6 +118,11 @@
       --accent-2: #10b981;
       --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.2);
       --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.2), 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
     }
 
     *,
@@ -518,12 +523,9 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-badge">
-      ✦ HabiTick vs TickTick
-    </div>
     <h1>The Minimalist, <span>Subscription-Free</span> TickTick Alternative</h1>
     <p class="hero-sub">Tired of paying $35.99/year just to track habits and daily tasks? HabiTick offers smart streak
-      shields, guilt-free rest days, and £5.99 lifetime access.</p>
+      shields, guilt-free rest days, and 99p/mo or £12.99 lifetime access.</p>
     <div class="hero-cta">
       <a href="https://app.habitick.app" class="btn btn-primary btn-large">Launch Web App →</a>
       <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
@@ -563,7 +565,7 @@
         <tbody>
           <tr>
             <td><strong>Pricing Model</strong></td>
-            <td><strong style="color:var(--accent-2)">£5.99 Lifetime</strong> (or Free)</td>
+            <td><strong style="color:var(--accent-2)">99p/mo or £12.99 Lifetime</strong> (or Free)</td>
             <td>$35.99 / year recurring</td>
           </tr>
           <tr>
@@ -594,7 +596,7 @@
       <div class="reason-card">
         <div class="reason-icon">💸</div>
         <div class="reason-title">Pay Once, Own Forever</div>
-        <div class="reason-desc">No monthly subscriptions or recurring fees. £5.99 grants you lifetime access to all Pro
+        <div class="reason-desc">Less than your morning coffee. 99p/mo or £12.99 grants you lifetime access to all Pro
           features forever.</div>
       </div>
       <div class="reason-card">
@@ -642,6 +644,18 @@
       localStorage.setItem('theme', next);
       if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
     }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
   </script>
 </body>
 
