@@ -4,7 +4,7 @@
   <!-- Landing page — primary indexable page -->
   <url>
     <loc>https://habitick.app</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- Privacy Policy -->
   <url>
     <loc>https://habitick.app/privacy</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -20,7 +20,7 @@
   <!-- Terms of Service -->
   <url>
     <loc>https://habitick.app/terms</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -28,7 +28,7 @@
   <!-- HabiTick vs TickTick Comparison -->
   <url>
     <loc>https://habitick.app/habitick-vs-ticktick</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
