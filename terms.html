@@ -34,12 +34,56 @@
     content="Read the Terms of Service for HabiTick. Review our terms of use, account guidelines, acceptable use policies, and legal agreements." />
   <meta name="twitter:image" content="https://habitick.app/habitick-og-social.png" />
   <meta name="twitter:image:alt" content="HabiTick Terms of Service" />
+
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="/habitick-blue-logo.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=DM+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
+
+  <!-- Structured Data Graph (Breadcrumbs, WebPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://habitick.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Terms of Service",
+            "item": "https://habitick.app/terms"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://habitick.app/terms#webpage",
+        "url": "https://habitick.app/terms",
+        "name": "Terms of Service — HabiTick",
+        "description": "Read the Terms of Service for HabiTick. Review our terms of use, account guidelines, acceptable use policies, and legal agreements.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "HabiTick",
+          "url": "https://habitick.app"
+        }
+      }
+    ]
+  }
+  </script>
   <style>
     *,
     *::before,

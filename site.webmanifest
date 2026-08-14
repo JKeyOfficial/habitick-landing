@@ -1,0 +1,36 @@
+{
+  "name": "HabiTick — Minimalist Habit Tracker",
+  "short_name": "HabiTick",
+  "description": "The minimalist habit tracker app & daily routine planner. Build habits without guilt.",
+  "start_url": "https://app.habitick.app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0f1a",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "categories": ["productivity", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/habitick-blue-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/habitick-blue-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -4,23 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HabiTick | Minimalist Habit Tracker & To-Do List</title>
+  <title>HabiTick — Minimalist Habit Tracker &amp; Daily Routine Planner</title>
   <meta name="author" content="HabiTick" />
   <meta name="description"
-    content="The minimalist habit tracker app, daily routine planner & subscription-free TickTick alternative. Track habits, tasks, and streaks without guilt." />
+    content="The minimalist habit tracker app, daily routine planner &amp; subscription-free TickTick alternative. Track habits, tasks, and streaks without guilt." />
   <link rel="canonical" href="https://habitick.app/" />
   <meta name="keywords"
-    content="habit tracker app, daily routine planner, ticktick alternative, minimalist habit tracker, task app, streak tracker" />
-  <meta name="robots" content="index, follow" />
+    content="habit tracker app, daily routine planner, ticktick alternative, minimalist habit tracker, adhd habit tracker, task app, streak tracker, guilt free habit tracker, lifetime habit tracker" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
   <meta name="theme-color" content="#2563eb" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="HabiTick" />
 
   <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Discord / iMessage -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://habitick.app/" />
-  <meta property="og:title" content="HabiTick — Build Habits That Actually Stick" />
+  <meta property="og:title" content="HabiTick — Minimalist Habit Tracker &amp; Routine Planner" />
   <meta property="og:description"
-    content="The minimalist habit tracker app, daily routine planner & subscription-free TickTick alternative. Track habits, tasks, and streaks without guilt." />
+    content="The minimalist habit tracker app, daily routine planner &amp; subscription-free TickTick alternative. Track habits, tasks, and streaks without guilt." />
   <meta property="og:image" content="https://habitick.app/habitick-og-social.png" />
   <meta property="og:image:secure_url" content="https://habitick.app/habitick-og-social.png" />
   <meta property="og:image:type" content="image/png" />
@@ -35,117 +39,178 @@
   <meta name="twitter:site" content="@habitick" />
   <meta name="twitter:creator" content="@habitick" />
   <meta name="twitter:url" content="https://habitick.app/" />
-  <meta name="twitter:title" content="HabiTick — Build Habits That Actually Stick" />
+  <meta name="twitter:title" content="HabiTick — Minimalist Habit Tracker &amp; Routine Planner" />
   <meta name="twitter:description"
-    content="The minimalist habit tracker app, daily routine planner & subscription-free TickTick alternative. Track habits, tasks, and streaks without guilt." />
+    content="The minimalist habit tracker app, daily routine planner &amp; subscription-free TickTick alternative. Track habits, tasks, and streaks without guilt." />
   <meta name="twitter:image" content="https://habitick.app/habitick-og-social.png" />
   <meta name="twitter:image:alt" content="HabiTick — Build Habits That Actually Stick" />
 
+  <!-- Preload Critical LCP Image for Core Web Vitals -->
+  <link rel="preload" as="image" href="phone-hero.webp" type="image/webp" fetchpriority="high" />
+
+  <link rel="manifest" href="/site.webmanifest" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"
     rel="stylesheet" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
   <link rel="icon" type="image/svg+xml" href="/habitick-blue-logo.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-  <!-- Structured Data -->
+  <!-- Unified JSON-LD Structured Data Graph (Organization, WebSite, SoftwareApplication, FAQPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "HabiTick",
-    "image": "https://habitick.app/habitick-og-image.png",
-    "operatingSystem": "Web",
-    "applicationCategory": "ProductivityApplication",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "lowPrice": "0.00",
-      "highPrice": "12.99",
-      "offers": [
-        {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "GBP",
-          "name": "Free Tier"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://habitick.app/#organization",
+        "name": "HabiTick",
+        "url": "https://habitick.app",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://habitick.app/habitick-blue-logo.png",
+          "width": 512,
+          "height": 512
         },
-        {
-          "@type": "Offer",
-          "price": "0.99",
-          "priceCurrency": "GBP",
-          "name": "Pro Monthly Tier"
+        "sameAs": [
+          "https://x.com/habitick",
+          "https://www.instagram.com/habitick/",
+          "https://www.linkedin.com/in/jacob-n-holmes/",
+          "https://www.youtube.com/@jkey/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://habitick.app/#website",
+        "url": "https://habitick.app/",
+        "name": "HabiTick",
+        "description": "Minimalist habit tracker app, daily routine planner & guilt-free streak manager.",
+        "publisher": {
+          "@id": "https://habitick.app/#organization"
         },
-        {
-          "@type": "Offer",
-          "price": "12.99",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://habitick.app/#software",
+        "name": "HabiTick",
+        "image": "https://habitick.app/habitick-og-image.png",
+        "screenshot": "https://habitick.app/phone-hero.webp",
+        "operatingSystem": "Web, Android, iOS",
+        "applicationCategory": "ProductivityApplication",
+        "applicationSubCategory": "Habit Tracker & Daily Routine Planner",
+        "url": "https://habitick.app",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=pro.habitick.app.twa",
+        "installUrl": "https://app.habitick.app",
+        "description": "A minimalist, guilt-free habit tracker featuring smart streaks, completion rates, holiday mode, streak shields, daily journal, and to-do lists.",
+        "featureList": [
+          "Smart Streaks with guilt-free rest days",
+          "Streak Shields to protect streaks from unexpected breaks",
+          "48-hour backdating for flexible logging",
+          "Holiday Mode to freeze progress when away",
+          "Completion rate analytics separate from streaks",
+          "Integrated priority daily to-do list",
+          "Daily mood and text reflection journal",
+          "Subscription-free lifetime access option"
+        ],
+        "offers": {
+          "@type": "AggregateOffer",
           "priceCurrency": "GBP",
-          "name": "Pro Lifetime Tier"
-        }
-      ]
-    },
-    "description": "A minimalist, guilt-free habit tracker featuring smart streaks, completion rates, holiday mode, streak shields, and a daily journal.",
-    "sameAs": [
-      "https://x.com/habitick",
-      "https://www.instagram.com/habitick/"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What makes HabiTick the best minimalist habit tracker app?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "HabiTick combines habit tracking and daily task management in one guilt-free interface. Unlike traditional habit apps that penalize you for missed days, HabiTick includes Smart Streaks, Streak Shields, and 48-hour backdating so your real progress is always protected."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why is HabiTick a top TickTick alternative?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "TickTick and other habit/task managers charge expensive monthly or yearly subscriptions. HabiTick offers a clean, focused habit tracker and task app starting from 99p/mo or a single lifetime payment of £12.99 — pay monthly or own it forever."
+          "lowPrice": "0.00",
+          "highPrice": "12.99",
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "0.00",
+              "priceCurrency": "GBP",
+              "name": "Free Tier",
+              "description": "Unlimited habits, to-do list, smart streak tracking, completion analytics, holiday mode, 3 streak shields"
+            },
+            {
+              "@type": "Offer",
+              "price": "0.99",
+              "priceCurrency": "GBP",
+              "name": "Pro Monthly Tier",
+              "description": "5 streak shields, AI-powered habit insights, priority support"
+            },
+            {
+              "@type": "Offer",
+              "price": "12.99",
+              "priceCurrency": "GBP",
+              "name": "Pro Lifetime Tier",
+              "description": "One-time payment lifetime access to all Pro features forever"
+            }
+          ]
+        },
+        "author": {
+          "@id": "https://habitick.app/#organization"
         }
       },
       {
-        "@type": "Question",
-        "name": "How do Streak Shields work in HabiTick?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Streak Shields are earned automatically by building consistent habits and completing tasks. If life gets busy or you take a break, a Streak Shield protects your hard-earned streak from resetting to zero."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is HabiTick available on Android and Web?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, HabiTick works in any browser at app.habitick.app and is available on the Google Play Store for Android devices."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is HabiTick available on iOS / iPhone?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! HabiTick runs smoothly on all iOS devices (iPhone & iPad) via any browser at app.habitick.app. You can tap 'Add to Home Screen' in Safari for an instant app experience."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is HabiTick free to use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! HabiTick is 100% free to start with unlimited habits, to-do lists, smart streak tracking, completion analytics, holiday mode, and daily mood journaling."
-        }
+        "@type": "FAQPage",
+        "@id": "https://habitick.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What makes HabiTick the best minimalist habit tracker app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "HabiTick combines habit tracking and daily task management in one minimalist, guilt-free interface. Unlike traditional habit apps that penalise you for missed days, HabiTick includes Smart Streaks, Streak Shields, and 48-hour backdating so your real progress is always protected."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is HabiTick a top TickTick alternative?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TickTick and other productivity tools require expensive recurring monthly or yearly subscriptions. HabiTick offers a clean, focused habit tracker and task app starting from 99p/mo or a single lifetime payment of £12.99 — pay monthly or own it forever."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do Streak Shields work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Streak Shields are earned automatically by building consistent habits and completing tasks. If life gets busy or you take an unexpected rest day, a Streak Shield protects your hard-earned streak from resetting to zero."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use HabiTick on Web, Android, and iOS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! HabiTick works in any web browser at app.habitick.app, is available as a native app on the Google Play Store for Android, and installs instantly on iOS (iPhone & iPad) via Safari 'Add to Home Screen'."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I track flexible or weekly habits without breaking my streak?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. HabiTick supports flexible scheduling and rest days. If a habit is scheduled 3 days a week, your off-days will never break your streak or trigger guilt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is HabiTick ADHD-friendly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! HabiTick was specifically designed with neurodivergent and ADHD workflows in mind: zero clutter, guilt-free streak recovery with Streak Shields, 48-hour backdating, and a combined daily view for both tasks and habits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is HabiTick free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! The Free plan gives you unlimited habit tracking, to-do task management, smart streak tracking, completion analytics, holiday mode, and daily mood journaling. Upgrading to Pro (99p/mo or £12.99 lifetime) unlocks 5 Streak Shields and personalized AI insights powered by Google Gemini."
+            }
+          }
+        ]
       }
     ]
   }
@@ -742,223 +807,7 @@
       border-color: rgba(255, 255, 255, 0.2);
     }
 
-    /* ── App Preview ── */
-    .preview-wrap {
-      margin: 64px auto 0;
-      max-width: 960px;
-      padding: 0 48px;
-      animation: fadeUp 0.8s 0.4s ease both;
-    }
 
-    .preview-frame {
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-lg);
-      overflow: hidden;
-      background: var(--bg-2);
-    }
-
-    .preview-bar {
-      padding: 12px 16px;
-      background: var(--bg-3);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .preview-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-
-    .preview-url {
-      flex: 1;
-      margin: 0 12px;
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 4px 12px;
-      font-size: 12px;
-      color: var(--text-3);
-      text-align: center;
-    }
-
-    .preview-inner {
-      padding: 28px;
-    }
-
-    .preview-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 24px;
-    }
-
-    .preview-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 16px;
-      color: var(--text);
-    }
-
-    .preview-logo img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-
-    .preview-pills {
-      display: flex;
-      gap: 8px;
-    }
-
-    .preview-pill {
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 600;
-      border: 1px solid var(--border);
-      background: var(--bg);
-      color: var(--text-2);
-    }
-
-    .preview-pill.green {
-      background: #10b98115;
-      border-color: #10b98130;
-      color: #10b981;
-    }
-
-    .preview-pill.blue {
-      background: var(--accent-light);
-      border-color: var(--accent)30;
-      color: var(--accent);
-    }
-
-    .preview-tabs {
-      display: flex;
-      gap: 6px;
-      margin-bottom: 24px;
-    }
-
-    .preview-tab {
-      padding: 7px 18px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      border: 1px solid var(--border);
-      color: var(--text-2);
-      background: transparent;
-      cursor: default;
-    }
-
-    .preview-tab.active {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .preview-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .preview-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px;
-      box-shadow: var(--shadow);
-    }
-
-    .preview-card-label {
-      font-size: 10px;
-      color: var(--text-3);
-      margin-bottom: 4px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .preview-card-val {
-      font-family: 'Syne', sans-serif;
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--text);
-    }
-
-    .preview-card-sub {
-      font-size: 10px;
-      color: var(--text-3);
-      margin-top: 4px;
-    }
-
-    .preview-habit {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 8px;
-      box-shadow: var(--shadow);
-    }
-
-    .preview-habit-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .preview-habit-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    .preview-habit-dot.green {
-      background: #10b981;
-    }
-
-    .preview-habit-name {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .preview-habit-freq {
-      font-size: 10px;
-      color: var(--text-3);
-      margin-top: 2px;
-    }
-
-    .preview-habit-done {
-      padding: 5px 12px;
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      background: #10b98115;
-      color: #10b981;
-      border: 1px solid #10b98130;
-    }
-
-    .preview-habit-btn {
-      padding: 5px 12px;
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      background: var(--accent);
-      color: #fff;
-    }
 
     /* ── Stats strip ── */
     .stats-strip {
@@ -1471,13 +1320,7 @@
         height: 300px;
       }
 
-      .preview-wrap {
-        padding: 0 20px;
-      }
 
-      .preview-cards {
-        grid-template-columns: 1fr;
-      }
 
       section {
         padding: 64px 20px;
@@ -1763,8 +1606,7 @@
     <div style="text-align:center;">
       <div class="section-label">FAQ</div>
       <h2 style="margin:0 auto 16px;">Frequently Asked Questions</h2>
-      <p class="section-sub" style="margin:0 auto 16px;">Everything you need to know about HabiTick, pricing, and how it
-        compares to apps like TickTick.</p>
+      <p class="section-sub" style="margin:0 auto 16px;">Everything you need to know about HabiTick, guilt-free routines, pricing, and how it compares to apps like TickTick.</p>
     </div>
     <div class="faq-grid">
       <details class="faq-item" open>
@@ -1784,9 +1626,9 @@
           <span class="faq-icon">▼</span>
         </summary>
         <div class="faq-content">
-          TickTick and other productivity tools require expensive monthly or yearly subscriptions. HabiTick offers a
-          clean, focused habit tracker and task app from 99p/mo or a single lifetime payment of £12.99 — pay monthly or
-          use it forever. Read our full <a href="/habitick-vs-ticktick"
+          TickTick and other productivity tools require expensive recurring monthly or yearly subscriptions. HabiTick offers a
+          clean, focused habit tracker and task app starting from 99p/mo or a single lifetime payment of £12.99 — pay monthly or
+          own it forever. Read our full <a href="/habitick-vs-ticktick"
             style="color:var(--accent); font-weight:600;">HabiTick vs
             TickTick comparison</a>.
         </div>
@@ -1803,27 +1645,32 @@
       </details>
       <details class="faq-item">
         <summary class="faq-summary">
-          <span>Can I use HabiTick on both Web and Android?</span>
+          <span>Can I use HabiTick on Web, Android, and iOS?</span>
           <span class="faq-icon">▼</span>
         </summary>
         <div class="faq-content">
           Yes! HabiTick works in any web browser at <a href="https://app.habitick.app" target="_blank"
-            style="color:var(--accent); font-weight:600;">app.habitick.app</a> and is available as a native app on the
+            style="color:var(--accent); font-weight:600;">app.habitick.app</a>, is available as a native app on the
           <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
-            style="color:var(--accent); font-weight:600;">Google Play Store</a> for Android devices.
+            style="color:var(--accent); font-weight:600;">Google Play Store</a> for Android, and installs instantly on iOS (iPhone &amp; iPad) via Safari 'Add to Home Screen'.
         </div>
       </details>
       <details class="faq-item">
         <summary class="faq-summary">
-          <span>Is HabiTick available on iOS / iPhone?</span>
+          <span>Can I track flexible or weekly habits without breaking my streak?</span>
           <span class="faq-icon">▼</span>
         </summary>
         <div class="faq-content">
-          Yes! HabiTick runs smoothly on all iOS devices (iPhone & iPad) as a web app. Simply open <a
-            href="https://app.habitick.app" target="_blank"
-            style="color:var(--accent); font-weight:600;">app.habitick.app</a> in Safari, tap the Share button, and
-          select <strong>'Add to Home Screen'</strong> for an instant app experience. We are also working on a native
-          iOS App Store release!
+          Yes. HabiTick supports flexible scheduling and rest days. If a habit is scheduled 3 days a week, your off-days will never break your streak or trigger guilt.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Is HabiTick ADHD-friendly?</span>
+          <span class="faq-icon">▼</span>
+        </summary>
+        <div class="faq-content">
+          Yes! HabiTick was specifically designed with neurodivergent and ADHD workflows in mind: zero clutter, guilt-free streak recovery with Streak Shields, 48-hour backdating, and a combined daily view for both tasks and habits.
         </div>
       </details>
       <details class="faq-item">
@@ -1834,8 +1681,7 @@
         <div class="faq-content">
           Yes! The Free plan gives you unlimited habit tracking, to-do task management, smart streak tracking,
           completion analytics, holiday mode, and daily mood journaling. Upgrading to Pro (99p/mo or £12.99 lifetime)
-          unlocks 5
-          Streak Shields and personalized AI insights, powered by Google Gemini!
+          unlocks 5 Streak Shields and personalized AI insights powered by Google Gemini.
         </div>
       </details>
     </div>
