@@ -1,5 +1,12 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/why-most-habit-apps-fail",
+      "destination": "/articles/why-most-habit-apps-fail",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
