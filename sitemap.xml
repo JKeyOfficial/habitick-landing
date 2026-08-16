@@ -30,6 +30,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Articles Hub Page -->
+  <url>
+    <loc>https://habitick.app/articles</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Article: Why Most Habit Apps Fail -->
   <url>
     <loc>https://habitick.app/why-most-habit-apps-fail</loc>
