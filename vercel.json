@@ -5,6 +5,11 @@
       "source": "/why-most-habit-apps-fail",
       "destination": "/articles/why-most-habit-apps-fail",
       "permanent": true
+    },
+    {
+      "source": "/habitick-vs-ticktick",
+      "destination": "/articles/habitick-vs-ticktick",
+      "permanent": true
     }
   ],
   "headers": [
