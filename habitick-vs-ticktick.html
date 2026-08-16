@@ -713,7 +713,8 @@
   <section class="faq-section">
     <div style="text-align:center;">
       <h2 style="margin:0 auto 12px;">Frequently Asked Questions</h2>
-      <p style="color:var(--text-2); max-width:540px; margin:0 auto;">Common questions about switching from TickTick to HabiTick.</p>
+      <p style="color:var(--text-2); max-width:540px; margin:0 auto;">Common questions about switching from TickTick to
+        HabiTick.</p>
     </div>
     <div class="faq-grid">
       <details class="faq-item" open>
@@ -722,7 +723,9 @@
           <span class="faq-icon">▼</span>
         </summary>
         <div class="faq-content">
-          TickTick charges a recurring $35.99/year subscription fee and resets your streaks strictly on missed days. HabiTick costs 99p/mo or £12.99 for lifetime access and uses Smart Streaks &amp; Streak Shields to protect real progress without guilt.
+          TickTick charges a recurring $35.99/year subscription fee and resets your streaks strictly on missed days.
+          HabiTick costs 99p/mo or £12.99 for lifetime access and uses Smart Streaks &amp; Streak Shields to protect
+          real progress without guilt.
         </div>
       </details>
       <details class="faq-item">
@@ -731,7 +734,8 @@
           <span class="faq-icon">▼</span>
         </summary>
         <div class="faq-content">
-          Yes, HabiTick integrates habit tracking, priority to-do lists, and daily mood journaling into one minimalist dashboard.
+          Yes, HabiTick integrates habit tracking, priority to-do lists, and daily mood journaling into one minimalist
+          dashboard.
         </div>
       </details>
       <details class="faq-item">
@@ -740,7 +744,8 @@
           <span class="faq-icon">▼</span>
         </summary>
         <div class="faq-content">
-          TickTick Premium costs $35.99 every year recurring forever. HabiTick offers a free tier, 99p/month Pro, or £12.99 for lifetime access with no recurring subscription fees.
+          TickTick Premium costs $35.99 every year recurring forever. HabiTick offers a free tier, 99p/month Pro, or
+          £12.99 for lifetime access with no recurring subscription fees.
         </div>
       </details>
     </div>
@@ -753,6 +758,7 @@
     </a>
     <div class="footer-links">
       <a href="/">Home</a>
+      <a href="/why-most-habit-apps-fail">Why Habit Apps Fail</a>
       <a href="https://app.habitick.app">App</a>
       <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
         rel="noopener noreferrer">Google Play</a>
@@ -772,8 +778,8 @@
         if (startTime === null) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
         const progress = Math.min(timeElapsed / duration, 1);
-        const ease = progress < 0.5 
-          ? 4 * progress * progress * progress 
+        const ease = progress < 0.5
+          ? 4 * progress * progress * progress
           : 1 - Math.pow(-2 * progress + 2, 3) / 2;
 
         window.scrollTo(0, startPosition + distance * ease);
