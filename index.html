@@ -80,6 +80,11 @@
           "width": 512,
           "height": 512
         },
+        "founder": {
+          "@type": "Person",
+          "name": "Jacob N Holmes",
+          "url": "https://habitick.app/about"
+        },
         "sameAs": [
           "https://x.com/habitick",
           "https://www.instagram.com/habitick/",
@@ -93,7 +98,6 @@
         "url": "https://habitick.app/",
         "name": "HabiTick",
         "description": "Minimalist habit tracker app, daily routine planner & guilt-free streak manager.",
-        "image": "https://habitick.app/habitick-og-image.png",
         "publisher": {
           "@id": "https://habitick.app/#organization"
         },
@@ -112,6 +116,9 @@
         "image": "https://habitick.app/habitick-og-image.png",
         "isPartOf": {
           "@id": "https://habitick.app/#website"
+        },
+        "about": {
+          "@id": "https://habitick.app/#software"
         }
       },
       {
@@ -127,6 +134,13 @@
         "downloadUrl": "https://play.google.com/store/apps/details?id=pro.habitick.app.twa",
         "installUrl": "https://app.habitick.app",
         "description": "A minimalist, guilt-free habit tracker featuring smart streaks, completion rates, holiday mode, streak shields, daily journal, and to-do lists.",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "128",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
         "featureList": [
           "Smart Streaks with guilt-free rest days",
           "Streak Shields to protect streaks from unexpected breaks",
@@ -141,12 +155,15 @@
           "priceCurrency": "GBP",
           "lowPrice": "0.00",
           "highPrice": "12.99",
+          "offerCount": "3",
           "offers": [
             {
               "@type": "Offer",
               "price": "0.00",
               "priceCurrency": "GBP",
               "name": "Free Tier",
+              "availability": "https://schema.org/InStock",
+              "url": "https://habitick.app/#pricing",
               "description": "Up to 7 habits, to-do list, smart streak tracking, completion analytics, holiday mode, 3 streak shields"
             },
             {
@@ -154,6 +171,8 @@
               "price": "0.99",
               "priceCurrency": "GBP",
               "name": "Pro Monthly Tier",
+              "availability": "https://schema.org/InStock",
+              "url": "https://habitick.app/#pricing",
               "description": "5 streak shields, AI-powered habit insights, priority support"
             },
             {
@@ -161,6 +180,8 @@
               "price": "12.99",
               "priceCurrency": "GBP",
               "name": "Pro Lifetime Tier",
+              "availability": "https://schema.org/InStock",
+              "url": "https://habitick.app/#pricing",
               "description": "One-time payment lifetime access to all Pro features forever"
             }
           ]
