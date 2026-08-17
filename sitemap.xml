@@ -38,6 +38,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Article: Why Habit Trackers Fail for ADHD -->
+  <url>
+    <loc>https://habitick.app/articles/why-habit-trackers-fail-adhd</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- About & Founder Page -->
   <url>
     <loc>https://habitick.app/about</loc>

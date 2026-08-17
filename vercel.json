@@ -10,6 +10,11 @@
       "source": "/habitick-vs-ticktick",
       "destination": "/articles/habitick-vs-ticktick",
       "permanent": true
+    },
+    {
+      "source": "/why-habit-trackers-fail-adhd",
+      "destination": "/articles/why-habit-trackers-fail-adhd",
+      "permanent": true
     }
   ],
   "headers": [
