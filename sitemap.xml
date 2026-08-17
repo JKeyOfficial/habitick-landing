@@ -38,6 +38,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- About & Founder Page -->
+  <url>
+    <loc>https://habitick.app/about</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://habitick.app/privacy</loc>
