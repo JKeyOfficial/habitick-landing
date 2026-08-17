@@ -15,6 +15,11 @@
       "source": "/why-habit-trackers-fail-adhd",
       "destination": "/articles/why-habit-trackers-fail-adhd",
       "permanent": true
+    },
+    {
+      "source": "/how-to-install-habitick-on-ios",
+      "destination": "/articles/how-to-install-habitick-on-ios",
+      "permanent": true
     }
   ],
   "headers": [

@@ -46,6 +46,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Article: How to Install HabiTick on iOS -->
+  <url>
+    <loc>https://habitick.app/articles/how-to-install-habitick-on-ios</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- About & Founder Page -->
   <url>
     <loc>https://habitick.app/about</loc>
