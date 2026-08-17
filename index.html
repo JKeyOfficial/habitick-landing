@@ -226,7 +226,15 @@
             "name": "Is HabiTick free to use?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes! The Free plan gives you unlimited habit tracking, to-do task management, smart streak tracking, completion analytics, holiday mode, and daily mood journaling. Upgrading to Pro (99p/mo or £12.99 lifetime) unlocks 5 Streak Shields and personalized AI insights powered by Google Gemini."
+              "text": "Yes! The Free plan gives you unlimited habit tracking, to-do task management, smart streak tracking, completion analytics, holiday mode, and daily mood journaling. Upgrading to Pro (99p/mo or £12.99 lifetime) unlocks 5 Streak Shields and personalized AI insights, powered by Google Gemini."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does HabiTick have different pricing tiers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! If free is your style, you’ll be blown away with the amount of bundled features at zero cost. However, if you’re a power user looking for every feature, Our split pricing model offers absolute affordability, or long-term value — your choice. Pay our super-low 99p monthly subscription with change you can find in your couch, or spend a little more for lifetime access and never think about it again."
             }
           }
         ]
@@ -1840,7 +1848,8 @@
         <div class="faq-content">
           Yes! HabiTick was specifically designed with neurodivergent and ADHD workflows in mind: zero clutter,
           guilt-free streak recovery with Streak Shields, and a combined daily view for both tasks and habits. Read our
-          full guide on <a href="/articles/why-habit-trackers-fail-adhd" style="color:var(--accent); font-weight:600;">why
+          full guide on <a href="/articles/why-habit-trackers-fail-adhd"
+            style="color:var(--accent); font-weight:600;">why
             habit trackers fail for ADHD</a>.
         </div>
       </details>
@@ -1853,6 +1862,19 @@
           Yes! The Free plan gives you unlimited habit tracking, to-do task management, smart streak tracking,
           completion analytics, holiday mode, and daily mood journaling. Upgrading to Pro (99p/mo or £12.99 lifetime)
           unlocks 5 Streak Shields and personalized AI insights powered by Google Gemini.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Does HabiTick have different pricing tiers?</span>
+          <span class="faq-icon">▼</span>
+        </summary>
+        <div class="faq-content">
+          Yes! If free is your style, you’ll be blown away with the amount of bundled features at zero cost. However, if
+          you’re a power user looking for every feature, our split pricing model offers absolute affordability, or
+          long-term value — your choice. Pay our super-low 99p monthly subscription with change you can find in your
+          couch,
+          or spend a little more for lifetime access and never think about it again.
         </div>
       </details>
     </div>
@@ -2001,6 +2023,24 @@
             const elementPosition = targetElement.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - navOffset;
             smoothScrollTo(offsetPosition, 850);
+          }
+        }
+      });
+    });
+
+    // Logo scroll to top on homepage
+    document.querySelectorAll('.nav-logo, .footer-logo').forEach(logo => {
+      logo.addEventListener('click', function (e) {
+        const isHomePage = window.location.pathname === '/' ||
+          window.location.pathname === '/index.html' ||
+          window.location.pathname.endsWith('/index.html') ||
+          window.location.pathname === '';
+
+        if (isHomePage) {
+          e.preventDefault();
+          smoothScrollTo(0, 750);
+          if (window.location.hash) {
+            history.pushState(null, '', window.location.pathname);
           }
         }
       });
