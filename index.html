@@ -253,7 +253,6 @@
     }
 
     html {
-      scroll-behavior: smooth;
       scroll-padding-top: 80px;
     }
 
@@ -1383,6 +1382,150 @@
         gap: 24px;
       }
     }
+
+    /* ── Tablet ── */
+    @media (max-width: 1024px) {
+      nav {
+        padding: 0 24px;
+      }
+
+      .nav-links {
+        gap: 20px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 48px 32px 0;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero {
+        height: auto;
+      }
+
+      .hero-content {
+        align-items: center;
+      }
+
+      .hero h1 {
+        text-align: center;
+      }
+
+      .hero-sub {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .hero-note {
+        text-align: center;
+      }
+
+      .hero-trust {
+        justify-content: center;
+      }
+
+      .hero-phone-img {
+        max-height: 560px;
+      }
+
+      section {
+        padding: 72px 32px;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .diff-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-strip {
+        gap: 40px;
+        padding: 40px 32px;
+      }
+
+      .faq-section {
+        padding: 72px 32px;
+      }
+
+      footer {
+        padding: 32px 24px;
+      }
+    }
+
+    /* ── Small Mobile ── */
+    @media (max-width: 480px) {
+      .hero-inner {
+        padding: 32px 16px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(28px, 7vw, 40px);
+      }
+
+      .hero-sub {
+        font-size: 14px;
+      }
+
+      section {
+        padding: 48px 16px;
+      }
+
+      .stats-strip {
+        gap: 24px;
+        padding: 32px 16px;
+      }
+
+      .stat-val {
+        font-size: 28px;
+      }
+
+      .stat-label {
+        font-size: 12px;
+      }
+
+      .pricing-card {
+        min-width: auto;
+        width: 100%;
+      }
+
+      .feature-card {
+        padding: 20px;
+      }
+
+      .faq-section {
+        padding: 48px 16px;
+      }
+
+      .faq-summary {
+        padding: 16px 18px;
+        font-size: 15px;
+      }
+
+      .faq-content {
+        padding: 0 18px 16px;
+        font-size: 14px;
+      }
+
+      .download-box {
+        padding: 32px 20px;
+      }
+
+      footer {
+        padding: 24px 16px;
+      }
+    }
   </style>
   <!-- Vercel Web Analytics -->
   <script>
@@ -1396,7 +1539,7 @@
   <!-- Nav -->
   <nav>
     <a href="/" class="nav-logo">
-      <div class="nav-logo-icon"><img src="habitick-blue-logo.webp" alt="HabiTick Logo" width="32" height="32" /></div>
+      <div class="nav-logo-icon"><img src="/habitick-blue-logo.webp" alt="HabiTick Logo" width="32" height="32" /></div>
       <span class="nav-logo-text">HabiTick</span>
     </a>
     <div class="nav-links">
@@ -1404,7 +1547,6 @@
       <a href="#why">Why HabiTick</a>
       <a href="#pricing">Pricing</a>
       <a href="/articles">Articles</a>
-      <a href="/articles/habitick-vs-ticktick">Us vs TickTick</a>
     </div>
     <div class="nav-actions">
       <a href="https://app.habitick.app" class="btn btn-ghost">Sign in</a>
@@ -1743,12 +1885,10 @@
   <!-- Footer -->
   <footer>
     <a href="/" class="footer-logo">
-      <img src="habitick-blue-logo.webp" alt="HabiTick Logo" width="32" height="32" /> HabiTick
+      <img src="/habitick-blue-logo.webp" alt="HabiTick Logo" width="32" height="32" /> HabiTick
     </a>
     <div class="footer-links">
       <a href="/articles">Articles</a>
-      <a href="/articles/why-most-habit-apps-fail">Why Habit Apps Fail</a>
-      <a href="/articles/habitick-vs-ticktick" title="Habitick vs TickTick">Us vs TickTick</a>
       <a href="https://app.habitick.app">App</a>
       <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
         rel="noopener noreferrer">Google Play</a>
@@ -1791,7 +1931,16 @@
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
-    function smoothScrollTo(targetPosition, duration = 850) {
+    let scrollAnimId = null;
+
+    function smoothScrollTo(targetPosition, duration = 800) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        window.scrollTo(0, targetPosition);
+        return;
+      }
+
+      if (scrollAnimId) cancelAnimationFrame(scrollAnimId);
+
       const startPosition = window.pageYOffset || document.documentElement.scrollTop;
       const distance = targetPosition - startPosition;
       let startTime = null;
@@ -1807,12 +1956,28 @@
         window.scrollTo(0, startPosition + distance * ease);
 
         if (timeElapsed < duration) {
-          requestAnimationFrame(animation);
+          scrollAnimId = requestAnimationFrame(animation);
+        } else {
+          scrollAnimId = null;
         }
       }
 
-      requestAnimationFrame(animation);
+      scrollAnimId = requestAnimationFrame(animation);
     }
+
+    window.addEventListener('wheel', () => {
+      if (scrollAnimId) {
+        cancelAnimationFrame(scrollAnimId);
+        scrollAnimId = null;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', () => {
+      if (scrollAnimId) {
+        cancelAnimationFrame(scrollAnimId);
+        scrollAnimId = null;
+      }
+    }, { passive: true });
 
     document.querySelectorAll('a[href*="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {

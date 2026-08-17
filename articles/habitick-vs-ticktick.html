@@ -169,7 +169,7 @@
       overflow-x: hidden;
     }
 
-    /* Nav */
+    /* ── Nav ── */
     nav {
       position: sticky;
       top: 0;
@@ -179,9 +179,10 @@
       justify-content: space-between;
       padding: 0 48px;
       height: 64px;
-      background: var(--bg);
+      background: rgba(10, 15, 26, 0.85);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(12px);
+      transition: background 0.3s, border-color 0.3s;
     }
 
     .nav-logo {
@@ -189,6 +190,17 @@
       align-items: center;
       gap: 8px;
       text-decoration: none;
+      height: 64px;
+    }
+
+    .nav-logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
 
     .nav-logo-icon img {
@@ -207,7 +219,11 @@
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      align-items: center;
+      gap: 32px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .nav-links a {
@@ -369,7 +385,8 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       box-shadow: var(--shadow-lg);
-      overflow: hidden;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     table {
@@ -456,7 +473,7 @@
       color: var(--text-2);
     }
 
-    /* Footer */
+    /* ── Footer ── */
     footer {
       position: relative;
       z-index: 2;
@@ -477,31 +494,76 @@
       font-family: 'Syne', sans-serif;
       font-weight: 800;
       color: var(--text);
+      font-size: 16px;
       text-decoration: none;
+      flex: 1;
+    }
+
+    .footer-logo img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      border-radius: 8px;
     }
 
     .footer-links {
       display: flex;
       gap: 24px;
       align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
     }
 
     .footer-links a {
       font-size: 13px;
       color: var(--text-3);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.2s, transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .footer-links a:hover {
       color: var(--text);
     }
 
+    .footer-links a.footer-social-icon:hover {
+      transform: translateY(-2px);
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-3);
+      flex: 1;
+      text-align: right;
+    }
+
     @media (max-width: 768px) {
-      nav,
+      nav {
+        padding: 0 16px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-actions {
+        gap: 8px;
+      }
+
+      .nav-actions .btn-ghost {
+        display: none;
+      }
+
+      .nav-actions .btn-primary {
+        font-size: 13px;
+        padding: 8px 14px;
+        white-space: nowrap;
+      }
+
       .hero,
-      .comparison-section,
-      footer {
+      .comparison-section {
         padding-left: 20px;
         padding-right: 20px;
       }
@@ -514,6 +576,29 @@
       td {
         padding: 12px 14px;
         font-size: 13px;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 20px;
+        gap: 24px;
+      }
+
+      .footer-logo {
+        flex: none;
+      }
+
+      .footer-links {
+        flex: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 24px;
+      }
+
+      .footer-copy {
+        flex: none;
+        text-align: center;
       }
     }
 
@@ -583,6 +668,91 @@
       color: var(--text-2);
       line-height: 1.6;
     }
+
+    /* ── Tablet ── */
+    @media (max-width: 1024px) {
+      nav {
+        padding: 0 24px;
+      }
+
+      .nav-links {
+        gap: 20px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .hero,
+      .comparison-section {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .reasons-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .faq-section {
+        padding: 0 24px 72px;
+      }
+
+      footer {
+        padding: 32px 24px;
+      }
+    }
+
+    /* ── Small Mobile ── */
+    @media (max-width: 480px) {
+      .hero,
+      .comparison-section {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero h1 {
+        font-size: clamp(24px, 6vw, 36px);
+      }
+
+      .hero-sub {
+        font-size: 14px;
+      }
+
+      table {
+        min-width: 520px;
+      }
+
+      th, td {
+        padding: 12px 12px;
+        font-size: 13px;
+      }
+
+      .reasons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reason-card {
+        padding: 20px;
+      }
+
+      .faq-section {
+        padding: 0 16px 48px;
+      }
+
+      .faq-summary {
+        padding: 16px 18px;
+        font-size: 15px;
+      }
+
+      .faq-content {
+        padding: 0 18px 16px;
+        font-size: 14px;
+      }
+
+      footer {
+        padding: 24px 16px;
+      }
+    }
   </style>
   <!-- Vercel Web Analytics -->
   <script>
@@ -601,12 +771,13 @@
     </a>
     <div class="nav-links">
       <a href="/#features">Features</a>
+      <a href="/#why">Why HabiTick</a>
       <a href="/#pricing">Pricing</a>
-      <a href="/articles">Articles</a>
-      <a href="/#faq">FAQ</a>
+      <a href="/articles" class="active" style="color:var(--text); font-weight:700;">Articles</a>
     </div>
     <div class="nav-actions">
-      <a href="https://app.habitick.app" class="btn btn-primary">Web App →</a>
+      <a href="https://app.habitick.app" class="btn btn-ghost">Sign in</a>
+      <a href="https://app.habitick.app" class="btn btn-primary">Web App</a>
     </div>
   </nav>
 
@@ -751,17 +922,45 @@
       <img src="/habitick-blue-logo.webp" alt="HabiTick Logo" width="32" height="32" /> HabiTick
     </a>
     <div class="footer-links">
-      <a href="/">Home</a>
       <a href="/articles">Articles</a>
-      <a href="/articles/why-most-habit-apps-fail">Why Habit Apps Fail</a>
-      <a href="/articles/habitick-vs-ticktick">Vs TickTick</a>
       <a href="https://app.habitick.app">App</a>
       <a href="https://play.google.com/store/apps/details?id=pro.habitick.app.twa" target="_blank"
         rel="noopener noreferrer">Google Play</a>
       <a href="/privacy">Privacy Policy</a>
       <a href="/terms">Terms of Service</a>
+      <a href="/cdn-cgi/l/email-protection#1b737e7777745b737a79726f727870356b6974">Contact</a>
+      <a href="https://x.com/habitick" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)"
+        class="footer-social-icon">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path
+            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126h-1.97z" />
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/habitick/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+        class="footer-social-icon">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/jacob-n-holmes/" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn" class="footer-social-icon">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path
+            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/@jkey/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+        class="footer-social-icon">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path
+            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
+      </a>
     </div>
-    <div style="font-size:12px; color:var(--text-3);">© 2026 HabiTick. All rights reserved.</div>
+    <div class="footer-copy">© 2026 HabiTick. All rights reserved.</div>
   </footer>
 
   <script>
