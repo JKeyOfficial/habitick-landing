@@ -597,6 +597,21 @@
       flex-wrap: wrap;
     }
 
+    /* ── SEO Primary Image (crawlable, not visible to users) ── */
+    .seo-hero-img {
+      height: 1px;
+      overflow: hidden;
+      opacity: 0.01;
+      pointer-events: none;
+      position: absolute;
+      width: 1px;
+    }
+    .seo-hero-img img {
+      display: block;
+      width: 1px;
+      height: 1px;
+    }
+
     /* ── Hero ── */
     .hero {
       position: relative;
@@ -1574,6 +1589,13 @@
       <a href="https://app.habitick.app" class="btn btn-primary">Web App</a>
     </div>
   </nav>
+
+  <!-- Primary page image for search engines (visible but unobtrusive) -->
+  <div class="seo-hero-img" aria-hidden="true">
+    <img src="https://habitick.app/habitick-og-image.png"
+      alt="HabiTick - Free Habit Tracker and Daily Routine Planner"
+      width="1200" height="630" loading="eager" />
+  </div>
 
   <!-- Hero -->
   <div class="hero">
