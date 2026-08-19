@@ -14,6 +14,14 @@
     </image:image>
   </url>
 
+  <!-- Article: 50 Habit Ideas to Build a Better Life -->
+  <url>
+    <loc>https://habitick.app/articles/50-habit-ideas-to-build-a-better-life</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- HabiTick vs TickTick Comparison -->
   <url>
     <loc>https://habitick.app/articles/habitick-vs-ticktick</loc>
